@@ -1,0 +1,55 @@
+<!-- views/homepage.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage - Pembuatan Ujian</title>
+</head>
+<body>
+  <h1>Homepage - Pembuatan Ujian</h1>
+
+  <!-- Tombol untuk melihat list soal ujian -->
+  <a href="/soal">Lihat List Soal Ujian</a>
+
+  <!-- Tombol untuk membuat ujian baru -->
+  <a href="/buatUjian">Buat Ujian Baru</a>
+
+  <h2>List Ujian yang Telah Dibuat</h2>
+  <table id="tabelUjian" border="1">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Mata Kuliah</th>
+        <th>Jenis Ujian</th>
+        <th>Jumlah Soal</th>
+        <th>Durasi</th>
+        <th>Tanggal</th>
+        <th>Jam</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let counter = 1; %>
+      <% data.forEach(item => { %>
+        <tr onclick="redirectPage('<%= item.id %>');">
+          <td><%= counter++; %></td>
+          <td><%= item.mata_kuliah %></td>
+          <td><%= item.jenis %></td>
+          <td><%= item.jumlah_soal %></td>
+          <td><%= item.durasi %></td>
+          <td><%= item.tanggal %></td>
+          <td><%= item.jam %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <script>
+    function redirectPage(itemId) {
+        // Gantilah 'halaman_tujuan.html' dengan nama halaman yang ingin Anda tuju
+        window.location.href = 'lihatUjian/' + itemId;
+    }
+  </script>
+</body>
+</html>

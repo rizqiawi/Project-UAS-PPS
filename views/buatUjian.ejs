@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Ujian</title>
+</head>
+<body>
+
+    <h2>Form Tambah Ujian</h2>
+
+    <form action="http://localhost:3000/buatUjian" method="POST">
+        <label for="mata_kuliah">Mata Kuliah:</label>
+        <select id="mata_kuliah" name="mata_kuliah">
+            <option value="PPS">PPS</option>
+            <option value="MDIK">MDIK</option>
+            <option value="MOSI">MOSI</option>
+        </select><br>
+
+        <label for="jenis">Jenis:</label>
+        <select id="jenis" name="jenis">
+            <option value="Kuis">Kuis</option>
+            <option value="UTS">UTS</option>
+            <option value="UAS">UAS</option>
+        </select><br>
+
+        <label for="jumlah_soal">Jumlah Soal:</label>
+        <input type="number" id="jumlah_soal" name="jumlah_soal" style="width: 50px" required><br>
+
+        <label for="durasi">Durasi:</label>
+        <input type="number" id="durasi" name="durasi" style="width: 30px" required>
+        <label for="durasi">menit</label><br>
+
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal"><br>
+
+        <label for="jam">Jam:</label>
+        <input type="time" id="jam" name="jam"><br>
+
+        <p>Tingkat Kesulitan</p>
+
+        <label for="mudah">Mudah:</label>
+        <input type="number" id="mudah" name="mudah" style="width: 30px" required>
+        <label for="mudah">%</label><br>
+
+        <label for="sedang">Sedang:</label>
+        <input type="number" id="sedang" name="sedang" style="width: 30px" required>
+        <label for="sedang">%</label><br>
+
+        <label for="sulit">Sulit:</label>
+        <input type="number" id="sulit" name="sulit" style="width: 30px" required>
+        <label for="sulit">%</label><br>
+
+        <input type="submit" value="Buat Ujian">
+    </form>
+
+</body>
+</html>

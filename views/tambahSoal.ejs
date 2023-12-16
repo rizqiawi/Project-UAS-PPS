@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Soal</title>
+</head>
+<body>
+
+    <h2>Form Tambah Soal</h2>
+
+    <form action="http://localhost:3000/tambahSoal" method="POST">
+        <label for="mata_kuliah">Mata Kuliah:</label>
+        <input type="text" id="mata_kuliah" name="mata_kuliah" required><br>
+
+        <label for="tingkat_kesulitan">Tingkat Kesulitan:</label>
+        <select id="tingkat_kesulitan" name="tingkat_kesulitan" required>
+            <option value="Mudah">Mudah</option>
+            <option value="Sedang">Sedang</option>
+            <option value="Sulit">Sulit</option>
+        </select><br>
+
+        <label for="pertanyaan">Pertanyaan:</label>
+        <textarea id="pertanyaan" name="pertanyaan" rows="4" required></textarea><br>
+
+        <input type="submit" value="Tambah Soal">
+    </form>
+
+</body>
+</html>

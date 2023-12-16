@@ -1,0 +1,38 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <p>Selamat datang di tutorial Node.js dan EJS!</p>
+  <h1>Data from Database</h1>
+
+  <table id="tableSoal" border="1">
+    <thead>
+      <tr>
+        <th>NO</th>
+        <th>Mata Kuliah</th>
+        <th>Pertanyaan</th>
+        <th>Kesulitan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let counter = 1; %>
+      <% data.forEach(item => { %>
+        <tr>
+          <td><%= counter++; %></td>
+          <td><%= item.mata_kuliah %></td>
+          <td><%= item.pertanyaan %></td>
+          <td><%= item.tingkat_kesulitan %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <a href="tambahSoal">Tambahkan Soal</a>
+</body>
+</html>
